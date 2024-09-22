@@ -2,16 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::middleware('web')->group(base_path('routes/admin.php'));
+
 Route::get('/', function () {
     return view('web.pages.home.index');
-});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
 });
