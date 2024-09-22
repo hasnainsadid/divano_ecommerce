@@ -10,8 +10,8 @@
           <ul>
               <!--add active class for current page-->
               <li class="left-side"><a href="index.html" class="logo-icon"><img src="{{asset('web')}}/assets/images/divano-logo.svg" alt="Alternate Text" width="150" height="34"/></a></li>
-              <li class="left-side"><a href="email-template.html">Email template</a></li>
-              <li class="left-side"><a href="shortcodes.html">Shortcodes</a></li>
+              {{-- <li class="left-side"><a href="email-template.html">Email template</a></li>
+              <li class="left-side"><a href="shortcodes.html">Shortcodes</a></li> --}}
               <li><a href="javascript:void(0);" class="open-login"><i class="icon icon-user"></i></a></li>
               <li><a href="javascript:void(0);" class="open-search"><i class="icon icon-magnifier"></i></a></li>
               <li><a href="javascript:void(0);" class="open-cart"><i class="icon icon-cart"></i> <span>4</span></a></li>
@@ -353,16 +353,17 @@
 
       <div class="login-wrapper">
           <div class="h5">Sign in</div>
-          <form>
+          <form method="POST" action="{{ route('login') }}">
+              @csrf
               <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
               </div>
               <div class="form-group">
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
               </div>
               <div class="form-group">
                   <a href="#forgotpassword" class="open-popup btn btn-main btn-sm">Forgot password?</a>
-                  <a href="#createaccount" class="open-popup btn btn-main btn-sm">Don't have an account?</a>
+                  <a href="{{ route('register') }}" class="open-popup btn btn-main btn-sm">Don't have an account?</a>
               </div>
               <button type="submit" class="btn btn-block btn-outline-primary">Submit</button>
           </form>
