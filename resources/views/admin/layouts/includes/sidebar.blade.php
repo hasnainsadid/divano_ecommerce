@@ -21,27 +21,69 @@
             <div class="menu-title">Dashboard</div>
           </a>
         </li>
+
+		{{-- home --}}
+		<li>
+			<a href="javascript:;" class="has-arrow">
+			  <div class="parent-icon"><span class="material-symbols-outlined">shopping_cart</span>
+			  </div>
+			  <div class="menu-title">Home</div>
+			</a>
+			<ul>
+			  <li> <a href="ecommerce-add-product.html"><span class="material-symbols-outlined">arrow_right</span>Slider</a>
+			  </li>
+			  <li> <a href="ecommerce-products.html"><span class="material-symbols-outlined">arrow_right</span>Category</a>
+			  </li>
+			  <li> <a href="ecommerce-customers.html"><span class="material-symbols-outlined">arrow_right</span>Interior inspiration</a>
+			  </li>
+			</ul>
+		  </li>
+
+		{{-- Category --}}
         <li>
-          <a href="javascript:;" class="has-arrow">
-            <div class="parent-icon"><span class="material-symbols-outlined">shopping_cart</span>
+          <a href="#">
+            <div class="parent-icon"><span class="material-symbols-outlined">home</span>
             </div>
-            <div class="menu-title">eCommerce</div>
+            <div class="menu-title">Category</div>
           </a>
-          <ul>
-            <li> <a href="ecommerce-add-product.html"><span class="material-symbols-outlined">arrow_right</span>Add Product</a>
-            </li>
-            <li> <a href="ecommerce-products.html"><span class="material-symbols-outlined">arrow_right</span>Products</a>
-            </li>
-            <li> <a href="ecommerce-customers.html"><span class="material-symbols-outlined">arrow_right</span>Customers</a>
-            </li>
-            <li> <a href="ecommerce-customer-details.html"><span class="material-symbols-outlined">arrow_right</span>Customer Details</a>
-            </li>
-            <li> <a href="ecommerce-orders.html"><span class="material-symbols-outlined">arrow_right</span>Orders</a>
-            </li>
-            <li> <a href="ecommerce-customer-details.html"><span class="material-symbols-outlined">arrow_right</span>Order Details</a>
-            </li>
-          </ul>
         </li>
+
+		{{-- Products --}}
+        <li>
+          <a href="#">
+            <div class="parent-icon"><span class="material-symbols-outlined">home</span>
+            </div>
+            <div class="menu-title">Products</div>
+          </a>
+        </li>
+		
+		{{-- Orders --}}
+        <li>
+          <a href="#">
+            <div class="parent-icon"><span class="material-symbols-outlined">home</span>
+            </div>
+            <div class="menu-title">Orders</div>
+          </a>
+        </li>
+		
+		{{--  --}}
+        {{-- <li>
+          <a href="#">
+            <div class="parent-icon"><span class="material-symbols-outlined">category</span>
+            </div>
+            <div class="menu-title">Category</div>
+          </a>
+        </li> --}}
+		
+		{{--  --}}
+        {{-- <li>
+          <a href="#">
+            <div class="parent-icon"><span class="material-symbols-outlined">home</span>
+            </div>
+            <div class="menu-title">Category</div>
+          </a>
+        </li> --}}
+
         <li>
           <a href="faq.html">
             <div class="parent-icon"><span class="material-symbols-outlined">call</span>
@@ -61,7 +103,7 @@
         </div>
         <div class="user-info">
           <h5 class="mb-0 user-name">{{Auth::user()->name}}</h5>
-          <p class="mb-0 user-designation">UI Engineer</p>
+          <p class="mb-0 user-designation">{{Auth::user()->email}}</p>
         </div>
       </div>
       <ul class="dropdown-menu dropdown-menu-end">

@@ -396,12 +396,6 @@
               </a>
             </div>
           </li>
-         
-           {{-- <li class="nav-item">
-             <a class="nav-link" data-bs-toggle="offcanvas" href="#ThemeCustomizer"><span class="material-symbols-outlined">
-              settings
-              </span></a>
-           </li> --}}
         </ul>
    </nav>
  </header>
