@@ -27,6 +27,7 @@
     <link rel="stylesheet" media="all" href="{{asset('web')}}/css/magnific-popup.css" />
     <link rel="stylesheet" media="all" href="{{asset('web')}}/css/owl.carousel.css" />
     <link rel="stylesheet" media="all" href="{{asset('web')}}/css/theme.css" />
+    <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
 
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet">
@@ -65,6 +66,8 @@
 
 
     </div> <!--/wrapper-->
+    {{-- izitoast --}}
+    @include('vendor.lara-izitoast.toast')
     
     <!--Scripts -->
     <script src="{{asset('web')}}/js/jquery.min.js"></script>
@@ -76,6 +79,7 @@
     <script src="{{asset('web')}}/js/jquery.easypiechart.js"></script>
     <script src="{{asset('web')}}/js/bigtext.js"></script>
     <script src="{{asset('web')}}/js/main.js"></script>
+    <script src="{{ asset('js/iziToast.js') }}"></script>
 </body>
 
 </html>

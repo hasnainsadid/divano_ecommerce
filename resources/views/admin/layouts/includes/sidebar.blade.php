@@ -41,7 +41,7 @@
 
 		{{-- Category --}}
         <li>
-          <a href="#">
+          <a href="{{route('categories.index')}}">
             <div class="parent-icon"><span class="material-symbols-outlined">home</span>
             </div>
             <div class="menu-title">Category</div>

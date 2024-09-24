@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->boolean('status')->default(1);
+            $table->string('slug')->nullable();
+            $table->string('meta_title');
+            $table->string('meta_description');
+            $table->json('meta_keywords');
             $table->timestamps();
         });
     }
