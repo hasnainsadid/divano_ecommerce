@@ -12,8 +12,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="category-table" class="table table-bordered table-hover text-center"
-                                style="width:100%">
+                            <table id="category-table" class="table table-bordered table-hover text-center text-center" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Sl no</th>

@@ -14,20 +14,13 @@ function imageUploadManager($image, $slug, $path, $width, $height)
         mkdir($path, 0777, true);
     }
 
-    $image = $manager->read($image);
-    $image = $image->resize(
+    $image = $manager->read($image)->resize(
         $width,
         $height,
         function ($constraint) {
             $constraint->aspectRatio();
         }
-    )->save($image_name);
-
-    // $image = $image->toWebp(80);
-    // $image->resize($width, $height, function ($constraint) {
-    //     $constraint->aspectRatio();
-    // })
-    // ->save($image_name);
+    )->toWebp()->save($image_name);
     return $image_name;
 }
 
@@ -42,11 +35,9 @@ function imageUpdateManager($image, $slug, $path, $width, $height, $old_image)
         mkdir($path, 0777, true);
     }
 
-    $image = $manager->read($image);
-    $image = $image->resize($width, $height, function ($constraint) {
+    $manager->read($image)->resize($width, $height, function ($constraint) {
         $constraint->aspectRatio();
-    });
-    $image->save($image_name);
+    })->toWebp()->save($image_name);
 
     if (file_exists($old_image) && $old_image != 'default.png') {
         @unlink($old_image);
