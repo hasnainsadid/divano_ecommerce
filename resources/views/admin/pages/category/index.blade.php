@@ -2,7 +2,7 @@
 @section('title', 'Category List')
 @section('content')
     <div class="row">
-        <div class="col-lg-10 mx-auto">
+        <div class="col-lg-11 mx-auto">
             <div class="card">
                 <div class="card-header px-4 py-3 bg-transparent"
                     style="display: flex; justify-content: space-between; align-items: center;">
@@ -36,8 +36,8 @@
     <script>
         $(document).ready(function() {
             $('#category-table').DataTable({
-                processing: true,
-                serverSide: true,
+                processing: false,
+                serverSide: false,
                 ajax: "{{ route('categories.index') }}",
                 columns: [{
                         data: 'DT_RowIndex',

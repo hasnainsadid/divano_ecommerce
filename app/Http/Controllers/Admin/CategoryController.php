@@ -9,21 +9,17 @@ use Yajra\DataTables\Facades\DataTables;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         if (request()->ajax()) {
             $categories = Category::latest()->get()->map(function ($category) {
                 return [
-                    // 'DT_RowIndex' => ,
                     'image' => $category->image,
                     'title' => $category->title,
                     'description' => $category->description,
                     'action' => '
                     <a href="' . route('categories.edit', $category->id) . '" class="btn btn-sm btn-primary">Edit</a>
-                    <form action="' . route('categories.destroy', $category->id) . '" method="POST" style="display:inline-block;" onsubmit="return confirm(\'Are you sure to delete this category?\');">
+                    <form action="' . route('categories.destroy', $category->id) . '" method="POST" style="display:inline;" onsubmit="return confirm(\'Are you sure to delete this category?\');">
                         ' . csrf_field() . '
                         ' . method_field('DELETE') . '
                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
@@ -38,19 +34,11 @@ class CategoryController extends Controller
         return view('admin.pages.category.index');
     }
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.pages.category.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validate = validator($request->all(), [
@@ -82,26 +70,12 @@ class CategoryController extends Controller
         return redirect()->route('categories.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         $category = Category::find($id);
         return view('admin.pages.category.edit', compact('category'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $category = Category::find($id);

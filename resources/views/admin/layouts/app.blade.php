@@ -27,7 +27,6 @@
     <link href="{{ asset('admin') }}/assets/css/minimal-theme.css" rel="stylesheet">
     <link href="{{ asset('admin') }}/assets/css/shadow-theme.css" rel="stylesheet">
     <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
-
 </head>
 
 <body>
@@ -91,9 +90,6 @@
         </div>
     </div>
     <!--end theme customization-->
-
-    {{-- izitoast --}}
-    @include('vendor.lara-izitoast.toast')
     <!--plugins-->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     {{-- <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script> --}}
@@ -107,8 +103,10 @@
     <script src="{{ asset('admin') }}/assets/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('admin') }}/assets/js/main.js"></script>
     <script src="{{ asset('admin') }}/assets/plugins/input-tags/js/tagsinput.js"></script>
+    {{-- izitoast --}}
     <script src="{{ asset('js/iziToast.js') }}"></script>
-    {{--  --}}
+    @include('vendor.lara-izitoast.toast')
+    <!--datatable-->
     <script src="{{ asset('admin') }}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
    <script src="{{ asset('admin') }}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
     @stack('scripts')
