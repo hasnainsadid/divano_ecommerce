@@ -50,7 +50,7 @@
 
 		{{-- Products --}}
         <li>
-          <a href="#">
+          <a href="{{route('products.index')}}">
             <div class="parent-icon"><span class="material-symbols-outlined">home</span>
             </div>
             <div class="menu-title">Products</div>
