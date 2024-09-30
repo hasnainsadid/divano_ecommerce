@@ -117,6 +117,7 @@
                             <label class="col-sm-3 col-form-label">Discount Type</label>
                             <div class="col-sm-9">
                                 <select name="discount_type" class="form-select">
+                                    <option disabled selected>Select Discount Type</option>
                                     <option value="percent">Percent</option>
                                     <option value="flat">Flat</option>
                                 </select>
@@ -127,7 +128,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Image Upload</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" name="image" multiple>
+                                <input type="file" class="form-control" name="image[]" multiple>
                             </div>
                         </div>
 
