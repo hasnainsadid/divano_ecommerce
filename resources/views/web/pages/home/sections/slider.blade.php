@@ -73,32 +73,7 @@
                                   <span>$7299,99</span>
                                   <span>8399,99</span>
                               </div>
-                              <small class="d-none d-sm-block">** Product prices with discount are available until the
-                                  end of stock </small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <!--Slide item-->
-
-          <div class="item d-flex align-items-center"
-              style="background-image:url({{ asset('web') }}/assets/images/slide-3.jpg)">
-              <div class="container">
-                  <div class="caption">
-                      <div class="promo text-center">
-                          <div class="animated" data-start="fadeInUp">
-                              <div class="title title-sm p-0">Bathroom Furniture</div>
-                          </div>
-                          <div class="animated" data-start="fadeInUp">
-                              Score new arrivals from latest items
-                              <br />
-                              Multipurpose eCommerce template ready
-                          </div>
-                          <div class="animated" data-start="fadeInUp">
-                              <a href="#" target="_blank" class="btn btn-light">New collection</a>
-                              <a href="#" target="_blank" class="btn btn-outline-light"> Get first discount</a>
+                              <small class="d-none d-sm-block">** Product prices with discount are available until the end of stock </small>
                           </div>
                       </div>
                   </div>

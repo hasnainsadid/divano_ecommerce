@@ -7,7 +7,7 @@
                 <div class="card-header px-4 py-3 bg-transparent"
                     style="display: flex; justify-content: space-between; align-items: center;">
                     <h5 class="mb-0">Product List</h5>
-                    <a href="{{ route('products.create') }}" class="btn btn-primary">Add New Category</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-primary">Add New Product</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
