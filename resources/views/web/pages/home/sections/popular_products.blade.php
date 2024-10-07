@@ -45,7 +45,11 @@
                             $discount = $discount[0];
                         @endphp
                         <div class="figure-grid">
+                            @if ($product->discount_type == 'percent')
                             <span class="badge badge-warning">-{{ $discount }}%</span>
+                            @else
+                            <span class="badge badge-warning">-{{ $discount }} Tk</span>
+                            @endif
                             <div class="image">
                                 <a href="product.html">
                                     <img src="{{ imageShow($product->images->first()->image) }}" alt="image" />

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('sub_title');
             $table->tinyInteger('category_id');
             $table->string('slug');
+            $table->string('sku');
             $table->tinyInteger('is_new')->default(0); // Defaults to 0 (not new)
             $table->string('brand_name')->nullable();
             $table->json('materials')->nullable();

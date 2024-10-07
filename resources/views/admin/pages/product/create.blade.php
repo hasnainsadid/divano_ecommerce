@@ -30,6 +30,16 @@
                                     placeholder="Enter Product Subtitle" required>
                             </div>
                         </div>
+                        
+                        {{-- SKU --}}
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Product SKU <span
+                                    class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="sku"
+                                    placeholder="Enter Product SKU" required>
+                            </div>
+                        </div>
 
                         <!-- Category -->
                         <div class="row mb-3">
@@ -64,7 +74,7 @@
                             <label class="col-sm-3 col-form-label">Product Materials <span
                                     class="text-danger">*</span></label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="materials" data-role="tagsinput" placeholder="Enter Product Subtitle" required>
+                                <input type="text" class="form-control" name="materials" data-role="tagsinput" placeholder="Enter Product Materials" required>
                             </div>
                         </div>
 
@@ -72,8 +82,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Brand Name <span class="text-danger">*</span></label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="brand_name" placeholder="Enter Brand Name"
-                                    required>
+                                <input type="text" class="form-control" name="brand_name" placeholder="Enter Brand Name">                           
                             </div>
                         </div>
 

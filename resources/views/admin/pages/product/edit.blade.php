@@ -30,6 +30,16 @@
                                     value="{{ $product->sub_title }}" required>
                             </div>
                         </div>
+                        
+                        <!-- SKU -->
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Product Subtitle <span
+                                    class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="sku"
+                                    value="{{ $product->sku }}" required>
+                            </div>
+                        </div>
 
                         <!-- Category -->
                         <div class="row mb-3">

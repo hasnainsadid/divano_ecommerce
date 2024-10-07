@@ -32,6 +32,7 @@ class ProductController extends Controller
                     </form>',
                 ];
             });
+            // dd($products);
             return DataTables::of($products)->addIndexColumn()->make(true);
         }
         return view('admin.pages.product.index');
@@ -54,6 +55,7 @@ class ProductController extends Controller
         $product->title = $request->title;
         $product->sub_title = $request->sub_title;
         $product->slug = slugify($request->title);
+        $product->sku = $request->sku;
         $product->category_id = $request->category_id;
         $product->is_new = $request->has('is_new') ? 1 : 0;
         $product->materials = json_encode($request->materials);
@@ -106,6 +108,7 @@ class ProductController extends Controller
         $product->title = $request->title;
         $product->sub_title = $request->sub_title;
         $product->slug = slugify($request->title);
+        $product->sku = $request->sku;
         $product->category_id = $request->category_id;
         $product->is_new = $request->has('is_new') ? 1 : 0;
         $product->materials = json_encode($request->materials);
